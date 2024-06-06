@@ -2,12 +2,14 @@
 <!DOCTYPE hibernate-mapping PUBLIC 
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-    <hibernate-mapping>
-    <class name="hibernateFirst.entity.Employee">
-    <id name="id"/>
-    <property name="name"/>
-    <property name="gender"/>
-    <property name="salary"/>
-    </class>
-    
-    </hibernate-mapping>
+<hibernate-mapping>
+	<class name="hibernateFirst.entity.Employee" table="emp">
+		<id name="id" >
+		<generator class="identity"/>
+		</id>
+		<property name="name" column="empName"/>
+		<property name="gender" column="empGen" />
+		<property name="salary" />
+	</class>
+
+</hibernate-mapping>
